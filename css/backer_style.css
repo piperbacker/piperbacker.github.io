@@ -1,0 +1,152 @@
+/* Custom Backdrop Colors */
+.backer-bg-green {
+    background-color: #5b6a2f;
+}
+
+.backer-bg-light-green {
+    background-color: #9ba352;
+}
+
+.backer-bg-brown {
+    background-color: #4c2719;
+}
+
+.bg-offwhite {
+    background-color: #fff7e9;
+}
+
+/* Custom Text Colors */
+.backer-text-green {
+    color: #5b6a2f;
+}
+
+.backer-text-light-green {
+    color: #9ba352;
+}
+
+.backer-text-brown {
+    color: #4c2719;
+}
+
+.backer-text-offwhite {
+    color: #fff7e9;
+}
+
+.dark-grn-txt{
+    color: #33421b;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 10px 20px 10px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: black;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #5b6a2f;
+}
+
+.navbar .navbar-brand:hover {
+    color: #5b6a2f;
+  }
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 0;
+}
+
+.navbar-nav {
+    font-size: 25px;
+    line-height: 0;
+  
+}
+
+/* Short About */
+.about-short {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #9ba352;
+}
+
+/* Projects */
+.projects{
+    height: 100%;
+}
+
+.projects-header {
+    background-color: #fff7e9;
+}
+
+.projects-title{
+    padding: 5px 20px;
+    color: #33421b; 
+    font-weight: bold; 
+    font-size: 25px;
+}
+
+.projects-desc {
+    padding: 0px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.projects-body{
+    padding: 10px 50px;
+    height: 100%;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.carousel-item {
+    padding: 30px;
+}
+
+.carousel-caption {
+    color: white;
+    font-size: 20px;
+}
+
+.carousel-img {
+    border-radius: 25px; 
+    object-fit: cover;
+    height:500px;
+    width: 100%;
+}
+
+/* About Section */
+.about{
+    display: flex;
+    padding: 50px;
+}
+
+.about-img {
+    border-radius: 25px;
+    border: 8px solid #9ba352;
+}
+
+.col{
+    align-self: flex-start;
+}
+
+/* Home Footer*/
+.home-footer {
+    text-align: center;
+}
+
+.footer-btn {
+    background-color: #9ba352;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 25%;
+    padding: 20px;
+    margin: 20px;
+}
+
+
