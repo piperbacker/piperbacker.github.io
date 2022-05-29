@@ -1,5 +1,4 @@
 # piperbacker.github.io
-portfolio site
 
 A simple, clean site designed to display my projects and share some info about myself with potential employers. 
 The goal is to keep it minimal, and allow the colors and friendly design to reflect a little bit about me :)
