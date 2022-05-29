@@ -1,38 +1,22 @@
 /* Custom Backdrop Colors */
-.backer-bg-green {
+.light-grn-bg {
     background-color: #5b6a2f;
 }
 
-.backer-bg-light-green {
-    background-color: #9ba352;
+.dark-grn-bg {
+    background-color: #33421b;
 }
 
-.backer-bg-brown {
-    background-color: #4c2719;
-}
-
-.bg-offwhite {
+.offwhite-bg {
     background-color: #fff7e9;
 }
 
 /* Custom Text Colors */
-.backer-text-green {
+.light-grn-text {
     color: #5b6a2f;
 }
 
-.backer-text-light-green {
-    color: #9ba352;
-}
-
-.backer-text-brown {
-    color: #4c2719;
-}
-
-.backer-text-offwhite {
-    color: #fff7e9;
-}
-
-.dark-grn-txt{
+.dark-grn-txt {
     color: #33421b;
 }
 
@@ -44,13 +28,14 @@
 .navbar .navbar-nav .nav-link {
     color: black;
 }
+
 .navbar .navbar-nav .nav-link:hover {
-  color: #5b6a2f;
+    color: #5b6a2f;
 }
 
 .navbar .navbar-brand:hover {
     color: #5b6a2f;
-  }
+}
 
 .navbar-brand {
     font-weight: bold;
@@ -61,7 +46,7 @@
 .navbar-nav {
     font-size: 25px;
     line-height: 0;
-  
+
 }
 
 /* Short About */
@@ -73,7 +58,7 @@
 }
 
 /* Projects */
-.projects{
+.projects {
     height: 100%;
 }
 
@@ -81,10 +66,10 @@
     background-color: #fff7e9;
 }
 
-.projects-title{
+.projects-title {
     padding: 5px 20px;
-    color: #33421b; 
-    font-weight: bold; 
+    color: #33421b;
+    font-weight: bold;
     font-size: 25px;
 }
 
@@ -93,7 +78,7 @@
     font-size: 20px;
 }
 
-.projects-body{
+.projects-body {
     padding: 10px 50px;
     height: 100%;
 }
@@ -102,24 +87,27 @@ h2 {
     font-size: 30px;
 }
 
-.carousel-item {
-    padding: 30px;
+.card {
+    width: 90%;
+    height: 425px;
+    color: #33421b;
+    border: 3px solid #33421b;
 }
 
-.carousel-caption {
-    color: white;
+.card-title {
+    color: black;
     font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.carousel-img {
-    border-radius: 25px; 
-    object-fit: cover;
-    height:500px;
-    width: 100%;
+.card-title:hover {
+    text-decoration: none;
+    color: #33421b;
 }
 
 /* About Section */
-.about{
+.about {
     display: flex;
     padding: 50px;
 }
@@ -129,7 +117,7 @@ h2 {
     border: 8px solid #9ba352;
 }
 
-.col{
+.col {
     align-self: flex-start;
 }
 
@@ -148,5 +136,3 @@ h2 {
     padding: 20px;
     margin: 20px;
 }
-
-
