@@ -50,7 +50,7 @@ h3 {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-style: italic;
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
 }
 
@@ -72,7 +72,7 @@ p {
   font-family: var(--secondary-font);
   font-style: italic;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
 }
 
@@ -299,10 +299,11 @@ nav:has(.nav-bar a:hover) {
   /* flex-wrap: wrap; mobile only */
   gap: 3rem;
   justify-content: center;
+  align-items: center;
 }
 
 #about #about-container img {
-  flex-basis: 70%;
+  /* flex-basis: 70%; */
   height: 20rem;
   background-color: var(--off-white);
   border: 0.5rem solid var(--lime-green);
@@ -314,8 +315,8 @@ nav:has(.nav-bar a:hover) {
   transition: all 300ms ease-in;
 }
 
-#about #about-container .text-container {
-  padding-right: 15%;
+#about p {
+  font-style: normal;
 }
 
 #about a {
