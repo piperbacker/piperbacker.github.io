@@ -120,7 +120,18 @@ nav {
   top: 0;
   z-index: 1;
   transition: all 300ms ease-in;
-  background-image: url("/img/nnnoise.svg");
+  background-image: url("/img/noise.svg");
+}
+
+nav a svg.logo {
+  height: 2rem;
+  fill: var(--pink);
+  transition: all 300ms ease-in;
+}
+
+nav a svg.logo:hover {
+  fill: var(--orange);
+  transition: all 300ms ease-out;
 }
 
 nav a {
@@ -143,13 +154,18 @@ nav:has(.nav-bar a:hover) {
   gap: 1rem;
 }
 
-#intro {
-  margin: 5rem;
+#intro-section {
+  padding: 5rem;
   color: black;
   font-family: var(--secondary-font);
 }
 
-#intro #intro-name {
+#intro-section #intro {
+  margin-top: -53px;
+  padding-top: 53px;
+}
+
+#intro-section #intro-name {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 150px;
@@ -158,23 +174,28 @@ nav:has(.nav-bar a:hover) {
   color: var(--blue);
 }
 
-#intro #intro-1 {
+#intro-section #intro-1 {
   font-weight: 400;
   font-size: 40px;
 }
 
-#intro #intro-2 {
+#intro-section #intro-2 {
   font-weight: 700;
   font-style: italic;
   font-size: 40px;
   color: var(--pink);
 }
 
-#projects {
+#projects-section {
   background-color: var(--blue);
 }
 
-#projects .project-card {
+#projects-section #projects {
+  margin-top: -53px;
+  padding-top: 53px;
+}
+
+#projects-section .project-card {
   display: flex;
   background-color: var(--orange);
   color: var(--blue);
@@ -184,27 +205,27 @@ nav:has(.nav-bar a:hover) {
   transition: all 300ms ease-in;
 }
 
-#projects .project-card:hover {
+#projects-section .project-card:hover {
   transition: all 400ms ease-out;
   background-color: var(--lime-green);
 }
 
-#projects .project-card:hover .text-container {
+#projects-section .project-card:hover .text-container {
   transition: all 400ms ease-out;
   transform: scale(1.05);
 }
 
-#projects .text-container {
+#projects-section .text-container {
   transition: all 300ms ease-in;
   transform: scale(1);
 }
 
-#projects h3 {
+#projects-section h3 {
   font-size: 40px;
   font-style: normal;
 }
 
-#projects .project-card .img-container {
+#projects-section .project-card .img-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,32 +234,37 @@ nav:has(.nav-bar a:hover) {
   margin: 0.5rem;
 }
 
-#projects .project-card .img-container img {
+#projects-section .project-card .img-container img {
   height: 20rem;
 }
 
-#projects .project-card .text-container {
+#projects-section .project-card .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#projects .project-card .text-container p {
+#projects-section .project-card .text-container p {
   margin-top: 0;
 }
 
-#illustrations h2 {
+#illustrations-section #illustrations {
+  margin-top: -53px;
+  padding-top: 53px;
+}
+
+#illustrations-section h2 {
   color: var(--blue);
 }
 
-#illustrations #illustrations-grid {
+#illustrations-section #illustrations-grid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 3rem;
 }
 
-#illustrations #illustrations-grid div {
+#illustrations-section #illustrations-grid div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,7 +273,7 @@ nav:has(.nav-bar a:hover) {
   background-color: var(--orange);
 }
 
-#illustrations #illustrations-grid div img {
+#illustrations-section #illustrations-grid div img {
   height: 22rem;
   cursor: pointer;
   aspect-ratio: 1/1;
@@ -255,16 +281,16 @@ nav:has(.nav-bar a:hover) {
   transform: scale(1);
 }
 
-#illustrations #illustrations-grid div:hover {
+#illustrations-section #illustrations-grid div:hover {
   background-color: var(--blue);
 }
 
-#illustrations #illustrations-grid div:hover img {
+#illustrations-section #illustrations-grid div:hover img {
   transition: all 300ms ease-in;
   transform: scale(1.09);
 }
 
-#illustrations #img-large {
+#illustrations-section #img-large {
   height: 80%;
   z-index: 2;
   top: 0;
@@ -276,7 +302,7 @@ nav:has(.nav-bar a:hover) {
   display: none;
 }
 
-#illustrations #img-large-bg {
+#illustrations-section #img-large-bg {
   background-color: var(--blue);
   opacity: 80%;
   width: 100%;
@@ -290,11 +316,16 @@ nav:has(.nav-bar a:hover) {
   text-align: right;
 }
 
-#about {
+#about-section {
   background-color: var(--pink);
 }
 
-#about #about-container {
+#about-section #about {
+  margin-top: -53px;
+  padding-top: 53px;
+}
+
+#about-section #about-container {
   display: flex;
   /* flex-wrap: wrap; mobile only */
   gap: 3rem;
@@ -302,7 +333,7 @@ nav:has(.nav-bar a:hover) {
   align-items: center;
 }
 
-#about #about-container img {
+#about-section #about-container img {
   /* flex-basis: 70%; */
   height: 20rem;
   background-color: var(--off-white);
@@ -310,16 +341,17 @@ nav:has(.nav-bar a:hover) {
   transition: all 300ms ease-out;
 }
 
-#about #about-container img:hover {
+#about-section #about-container img:hover {
   border: 0.5rem solid var(--blue);
   transition: all 300ms ease-in;
 }
 
-#about p {
+#about-section p {
   font-style: normal;
+  padding-right: 4rem;
 }
 
-#about a {
+#about-section a {
   display: flex;
   align-items: stretch;
   gap: 0.5rem;
@@ -328,18 +360,18 @@ nav:has(.nav-bar a:hover) {
   transition: all 300ms ease-out;
 }
 
-#about a:hover {
+#about-section a:hover {
   color: var(--blue);
   transition: all 300ms ease-in;
 }
 
-#about a svg {
+#about-section a svg {
   height: 1.5rem;
   fill: var(--lime-green);
   transition: all 300ms ease-out;
 }
 
-#about a:hover svg {
+#about-section a:hover svg {
   fill: var(--blue);
   transition: all 300ms ease-in;
 }
