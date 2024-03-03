@@ -17,3 +17,13 @@
             <div>
                 <img src="img/illustrations/IMG_0954.jpg"></img>
             </div>--->
+
+
+
+#intro-section #intro-img div {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(243, 134, 104, 1) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}

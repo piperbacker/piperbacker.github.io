@@ -14,6 +14,9 @@
   --secondary-font: "Lato", sans-serif;
   --khula-height: 0.8em;
   --khula-line-height: 1.1em;
+
+  --noise: url(/img/noise.svg);
+  --gradiant-noise: url("/img/gradiant_noise.svg");
 }
 
 html {
@@ -23,7 +26,7 @@ html {
 body {
   margin: 0;
   background-color: var(--off-white);
-  background-image: url("/img/noise.svg");
+  background-image: var(--noise);
   font-family: var(--main-font);
   cursor: default;
 }
@@ -31,6 +34,7 @@ body {
 section {
   padding: var(--container-padding);
   color: var(--off-white);
+  background-image: var(--noise);
 }
 
 h1 {
@@ -78,7 +82,7 @@ p {
 
 a {
   font-weight: 700;
-  color: black;
+  color: var(--blue);
   text-decoration: none;
   margin-bottom: -0.5rem;
 }
@@ -114,13 +118,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 0.3rem var(--blue);
-  color: var(--blue);
-  background-color: var(--off-white);
+  color: var(--off-white);
+  background-color: var(--blue);
   position: sticky;
   top: 0;
   z-index: 1;
   transition: all 300ms ease-in;
-  background-image: url("/img/noise.svg");
+  background-image: var(--noise);
+}
+
+nav .logo-link {
+  margin-right: -1rem;
 }
 
 nav a svg.logo {
@@ -135,7 +143,7 @@ nav a svg.logo:hover {
 }
 
 nav a {
-  color: var(--blue);
+  color: var(--off-white);
 }
 
 nav .nav-bar {
@@ -155,14 +163,77 @@ nav:has(.nav-bar a:hover) {
 }
 
 #intro-section {
-  padding: 5rem;
-  color: black;
+  color: var(--off-white);
   font-family: var(--secondary-font);
+
+  background: linear-gradient(to right, var(--blue), transparent),
+    var(--gradiant-noise);
 }
 
 #intro-section #intro {
   margin-top: -53px;
   padding-top: 53px;
+}
+
+#intro-section #intro-view {
+  height: 45vw;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+#intro-section #intro-img {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
+}
+
+/* #intro-img svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+} */
+
+#intro-img div {
+  position: relative;
+}
+
+/* #intro-img div::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  transform: translate(10px, 8px);
+  z-index: -1;
+  background: conic-gradient(
+    from 90deg at 40% -25%,
+    #ffd700,
+    #f79d03,
+    #ee6907,
+    #e6390a,
+    #de0d0d,
+    #d61039,
+    #cf1261,
+    #c71585,
+    #cf1261,
+    #d61039,
+    #de0d0d,
+    #ee6907,
+    #f79d03,
+    #ffd700,
+    #ffd700,
+    #ffd700
+  );
+  filter: blur(10px);
+} */
+
+#intro-img div::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  transform: translate(10px, 8px);
+  z-index: -1;
+  background-image: url(/img/orange_star.svg);
+  filter: blur(10px);
 }
 
 #intro-section #intro-name {
@@ -171,7 +242,8 @@ nav:has(.nav-bar a:hover) {
   font-size: 150px;
   height: var(--khula-height);
   line-height: var(--khula-line-height);
-  color: var(--blue);
+  color: var(--orange);
+  margin-left: -10px;
 }
 
 #intro-section #intro-1 {
@@ -186,8 +258,13 @@ nav:has(.nav-bar a:hover) {
   color: var(--pink);
 }
 
+#intro-section p {
+  margin-top: 0;
+}
+
 #projects-section {
-  background-color: var(--blue);
+  background-color: var(--pink);
+  background-image: var(--noise);
 }
 
 #projects-section #projects {
@@ -195,20 +272,27 @@ nav:has(.nav-bar a:hover) {
   padding-top: 53px;
 }
 
-#projects-section .project-card {
+.project-card {
   display: flex;
-  background-color: var(--orange);
-  color: var(--blue);
+  background-color: var(--blue);
+  color: var(--off-white);
+  background-image: var(--noise);
   gap: 3rem;
   padding: 0 1rem;
   cursor: pointer;
   transition: all 300ms ease-in;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
 #projects-section .project-card:hover {
   transition: all 400ms ease-out;
-  background-color: var(--lime-green);
+  /* background-color: var(--lime-green); */
 }
+
+/* #projects-section .project-card:hover .img-container {
+  background: var(--orange);
+} */
 
 #projects-section .project-card:hover .text-container {
   transition: all 400ms ease-out;
@@ -223,6 +307,7 @@ nav:has(.nav-bar a:hover) {
 #projects-section h3 {
   font-size: 40px;
   font-style: normal;
+  color: var(--lime-green);
 }
 
 #projects-section .project-card .img-container {
@@ -230,7 +315,7 @@ nav:has(.nav-bar a:hover) {
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
-  background: var(--lime-green);
+  /* background: var(--lime-green); */
   margin: 0.5rem;
 }
 
@@ -271,6 +356,7 @@ nav:has(.nav-bar a:hover) {
   height: 24rem;
   aspect-ratio: 1/1;
   background-color: var(--orange);
+  background-image: var(--noise);
 }
 
 #illustrations-section #illustrations-grid div img {
@@ -304,6 +390,7 @@ nav:has(.nav-bar a:hover) {
 
 #illustrations-section #img-large-bg {
   background-color: var(--blue);
+  background-image: var(--noise);
   opacity: 80%;
   width: 100%;
   height: 100%;
@@ -318,6 +405,7 @@ nav:has(.nav-bar a:hover) {
 
 #about-section {
   background-color: var(--pink);
+  background-image: var(--noise);
 }
 
 #about-section #about {
@@ -383,8 +471,9 @@ footer {
   gap: 0.5rem;
   margin: 2rem 0;
   text-align: center;
+  color: var(--blue);
 }
 
 footer a svg:hover {
-  color: var(--blue);
+  color: var(--orange);
 }
