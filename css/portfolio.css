@@ -17,6 +17,26 @@
 
   --noise: url(/img/noise.svg);
   --gradiant-noise: url("/img/gradiant_noise.svg");
+
+  --conic-gradiant: conic-gradient(
+    from 90deg at 40% -25%,
+    #ffd700,
+    #f79d03,
+    #ee6907,
+    #e6390a,
+    #de0d0d,
+    #d61039,
+    #cf1261,
+    #c71585,
+    #cf1261,
+    #d61039,
+    #de0d0d,
+    #ee6907,
+    #f79d03,
+    #ffd700,
+    #ffd700,
+    #ffd700
+  );
 }
 
 html {
@@ -34,7 +54,17 @@ body {
 section {
   padding: var(--container-padding);
   color: var(--off-white);
-  background-image: var(--noise);
+  background-image: var(--gradiant-noise);
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  filter: saturate(200%) blur(10px);
+  background: var(--conic-gradiant);
 }
 
 h1 {
@@ -190,50 +220,46 @@ nav:has(.nav-bar a:hover) {
   align-items: flex-end;
 }
 
-/* #intro-img svg {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-} */
-
 #intro-img div {
   position: relative;
 }
 
-/* #intro-img div::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  transform: translate(10px, 8px);
-  z-index: -1;
-  background: conic-gradient(
-    from 90deg at 40% -25%,
-    #ffd700,
-    #f79d03,
-    #ee6907,
-    #e6390a,
-    #de0d0d,
-    #d61039,
-    #cf1261,
-    #c71585,
-    #cf1261,
-    #d61039,
-    #de0d0d,
-    #ee6907,
-    #f79d03,
-    #ffd700,
-    #ffd700,
-    #ffd700
-  );
-  filter: blur(10px);
-} */
+@keyframes scaleStar {
+  from {
+    transform: translate(-10px, 8px) scale(0.9);
+  }
 
-#intro-img div::before {
+  to {
+    transform: translate(-10px, 8px) scale(1.1);
+  }
+}
+
+#intro-img #star1::before {
   content: "";
   position: absolute;
   inset: -5px;
-  transform: translate(10px, 8px);
   z-index: -1;
-  background-image: url(/img/orange_star.svg);
-  filter: blur(10px);
+  background-image: url(/img/blue_star.svg);
+  filter: saturate(200%) blur(10px);
+
+  animation-duration: 1.5s;
+  animation-name: scaleStar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#intro-img #star2::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  background-image: url(/img/blue_star.svg);
+  filter: saturate(200%) blur(10px);
+
+  animation-duration: 2s;
+  animation-name: scaleStar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #intro-section #intro-name {
@@ -244,6 +270,15 @@ nav:has(.nav-bar a:hover) {
   line-height: var(--khula-line-height);
   color: var(--orange);
   margin-left: -10px;
+}
+
+#intro-section #intro-name::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  filter: saturate(200%) blur(10px);
+  background: var(--conic-gradiant);
 }
 
 #intro-section #intro-1 {
