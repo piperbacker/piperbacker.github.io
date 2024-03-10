@@ -54,17 +54,7 @@ body {
 section {
   padding: var(--container-padding);
   color: var(--off-white);
-  background-image: var(--gradiant-noise);
   position: relative;
-}
-
-section::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  z-index: -1;
-  filter: saturate(200%) blur(10px);
-  background: var(--conic-gradiant);
 }
 
 h1 {
@@ -195,7 +185,6 @@ nav:has(.nav-bar a:hover) {
 #intro-section {
   color: var(--off-white);
   font-family: var(--secondary-font);
-
   background: linear-gradient(to right, var(--blue), transparent),
     var(--gradiant-noise);
 }
@@ -309,6 +298,7 @@ nav:has(.nav-bar a:hover) {
 
 .project-card {
   display: flex;
+  justify-content: center;
   background-color: var(--blue);
   color: var(--off-white);
   background-image: var(--noise);
@@ -316,25 +306,18 @@ nav:has(.nav-bar a:hover) {
   padding: 0 1rem;
   cursor: pointer;
   transition: all 300ms ease-in;
-  position: relative;
-  transform-style: preserve-3d;
 }
 
 #projects-section .project-card:hover {
   transition: all 400ms ease-out;
-  /* background-color: var(--lime-green); */
 }
 
-/* #projects-section .project-card:hover .img-container {
-  background: var(--orange);
-} */
-
-#projects-section .project-card:hover .text-container {
+#projects-section .project-card:hover img {
   transition: all 400ms ease-out;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-#projects-section .text-container {
+#projects-section img {
   transition: all 300ms ease-in;
   transform: scale(1);
 }
@@ -350,7 +333,6 @@ nav:has(.nav-bar a:hover) {
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
-  /* background: var(--lime-green); */
   margin: 0.5rem;
 }
 
@@ -362,6 +344,7 @@ nav:has(.nav-bar a:hover) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
 }
 
 #projects-section .project-card .text-container p {
