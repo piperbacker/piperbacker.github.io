@@ -9,6 +9,16 @@ svg {
   width: 1.5rem;
 }
 
+img {
+  border: 0.5rem solid var(--orange);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #header {
   background: linear-gradient(to right, var(--blue), transparent),
     var(--gradiant-noise);
@@ -39,6 +49,10 @@ svg {
   font-style: italic;
   font-weight: normal;
   font-size: 25px;
+}
+
+#header img {
+  border: none;
 }
 
 h3 {
@@ -73,6 +87,7 @@ section.white-bg {
 
 .sm-section h3 {
   width: 15rem;
+  text-align: center;
 }
 
 .sm-section p {
@@ -84,27 +99,15 @@ section div.img-section {
   align-items: center;
   justify-content: center;
   gap: 3rem;
-}
-
-.img-container {
-  background-color: var(--orange);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  height: 35rem;
-  transition: all 300ms ease-out;
-  background-image: url("/img/noise.svg");
-}
-
-.img-container:hover {
-  background-color: var(--blue);
-  transition: all 300ms ease-in;
+  margin-top: 4rem;
 }
 
 p.img-caption {
   text-align: center;
   font-size: 18px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 section a {
