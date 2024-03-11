@@ -110,6 +110,10 @@ p.img-caption {
   justify-content: center;
 }
 
+p.img-caption a:hover {
+  color: var(--lime-green);
+}
+
 section a {
   display: flex;
   align-items: stretch;
