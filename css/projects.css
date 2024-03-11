@@ -83,6 +83,7 @@ section.white-bg {
   align-items: center;
   gap: 3rem;
   justify-content: center;
+  padding-top: 3rem;
 }
 
 .sm-section h3 {
@@ -105,7 +106,6 @@ section div.img-section {
 p.img-caption {
   text-align: center;
   font-size: 18px;
-  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
 }
