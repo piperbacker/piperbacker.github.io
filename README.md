@@ -10,7 +10,7 @@ The goal is for my portfolio website to be visually unique and really reflect my
 
 ![New Project (2)](https://github.com/piperbacker/piperbacker.github.io/assets/69812775/1294f876-2471-436d-8333-6cb047000106)
 
-## Tools:
+## Tools
 • Figma <br>
 • Photoshop  <br>
 • Affinity Designer  <br>
