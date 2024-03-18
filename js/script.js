@@ -1,5 +1,5 @@
-const images = ["IMG_0941.jpg", "IMG_0952.jpg", "IMG_0943.jpg",
-    "IMG_0937.jpg", "IMG_0949.jpg", "IMG_0954.jpg"];
+const images = [{ link: "IMG_0941.jpg", caption: "Koi. Graphite, ink, marker" }, { link: "IMG_0952.jpg", caption: "Interstellar rodeo. Marker, ink" }, { link: "IMG_0943.jpg", caption: "Train to nowhere. Marker, ink" },
+{ link: "IMG_0937.jpg", caption: "Finding the right path. Colored pencil, marker, ink" }, { link: "IMG_0949.jpg", caption: "The dragon. Gouache, ink" }, { link: "IMG_0954.jpg", caption: "14.07. Marker, ink" }];
 
 const logoSvg = `<svg class="logo" width="100%" height="100%" viewBox="0 0 167 250" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
@@ -41,31 +41,36 @@ const linkedin = {
 
 const socials = [dribbble, github, linkedin];
 
-function enlargeImage(src, img, bg) {
+function enlargeImage(src, img, bg, caption, captionText) {
+    console.log("caption text", captionText);
     document.body.style.overflow = "hidden";
     img.src = src;
+    caption.textContent = captionText;
     img.style.display = "block";
     bg.style.display = "block";
+    caption.style.display = "block";
 }
 
-function closeEnlargedImage(img, bg) {
+function closeEnlargedImage(img, bg, caption) {
     document.body.style.overflow = "auto";
     img.style.display = "none";
     bg.style.display = "none";
+    caption.style.display = "none";
 }
 
 function displayIllustrations() {
     const imgLarge = document.getElementById('img-large');
     const imgLargeBG = document.getElementById('img-large-bg');
-    imgLargeBG.addEventListener('click', function () { closeEnlargedImage(imgLarge, imgLargeBG) });
+    const imgLargeCaption = document.getElementById('img-large-caption')
+    imgLargeBG.addEventListener('click', function () { closeEnlargedImage(imgLarge, imgLargeBG, imgLargeCaption) });
 
     const grid = document.getElementById('illustrations-grid');
     for (let image of images) {
         const imgDiv = document.createElement('div');
         const img = document.createElement('img');
-        img.src = "img/illustrations/" + image;
+        img.src = "img/illustrations/" + image.link;
         img.role = "button";
-        img.addEventListener('click', function () { enlargeImage(this.src, imgLarge, imgLargeBG) });
+        img.addEventListener('click', function () { enlargeImage(this.src, imgLarge, imgLargeBG, imgLargeCaption, image.caption) });
         grid.appendChild(imgDiv);
         imgDiv.appendChild(img);
     }

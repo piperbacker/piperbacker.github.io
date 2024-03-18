@@ -165,6 +165,7 @@ nav a svg.logo:hover {
 
 nav a {
   color: var(--off-white);
+  font-size: 1.5rem;
 }
 
 nav .nav-bar {
@@ -319,6 +320,10 @@ nav:has(.nav-bar a:hover) {
   transform: scale(1.03);
 }
 
+#projects-section .project-card:hover h3 {
+  color: var(--orange);
+}
+
 #projects-section img {
   width: 40%;
   transition: all 300ms ease-in;
@@ -359,8 +364,13 @@ nav:has(.nav-bar a:hover) {
   padding-top: 53px;
 }
 
-#illustrations-section h2 {
+#illustrations-section {
   color: var(--blue);
+}
+
+#illustrations-section p {
+  font-style: normal;
+  width: 90%;
 }
 
 #illustrations-section #illustrations-grid {
@@ -422,6 +432,15 @@ nav:has(.nav-bar a:hover) {
   display: none;
   overflow: hidden;
   text-align: right;
+}
+
+#illustrations-section #img-large-caption {
+  display: none;
+  z-index: 2;
+  bottom: 0;
+  position: fixed;
+  color: white;
+  text-align: center;
 }
 
 #about-section {
