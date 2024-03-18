@@ -11,6 +11,8 @@
   --container-padding: 0.5rem 6rem 3rem 6rem;
   --mobile-padding: 0.5rem 2rem 3rem 2rem;
 
+  --border-radius: 1rem;
+
   --main-font: "Khula", sans-serif;
   --secondary-font: "Lato", sans-serif;
   --khula-height: 0.8em;
@@ -309,6 +311,7 @@ nav:has(.nav-bar a:hover) {
   padding: 0 1rem;
   cursor: pointer;
   transition: all 300ms ease-in;
+  border-radius: var(--border-radius);
 }
 
 #projects-section .project-card:hover {
@@ -388,6 +391,7 @@ nav:has(.nav-bar a:hover) {
   aspect-ratio: 1/1;
   background-color: var(--orange);
   background-image: var(--noise);
+  border-radius: var(--border-radius);
 }
 
 #illustrations-section #illustrations-grid div img {
@@ -455,18 +459,17 @@ nav:has(.nav-bar a:hover) {
 
 #about-section #about-container {
   display: flex;
-  /* flex-wrap: wrap; mobile only */
   gap: 3rem;
   justify-content: center;
   align-items: center;
 }
 
 #about-section #about-container img {
-  /* flex-basis: 70%; */
   height: 20rem;
   background-color: var(--off-white);
   border: 0.5rem solid var(--lime-green);
   transition: all 300ms ease-out;
+  border-radius: var(--border-radius);
 }
 
 #about-section #about-container img:hover {

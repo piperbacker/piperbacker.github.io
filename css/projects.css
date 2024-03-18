@@ -10,6 +10,7 @@ svg {
 }
 
 img {
+  border-radius: var(--border-radius);
   border: 0.5rem solid var(--orange);
 }
 
