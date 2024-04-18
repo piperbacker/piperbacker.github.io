@@ -47,7 +47,6 @@ img {
 #header h3 {
   color: var(--off-white);
   font-family: var(--secondary-font);
-  font-style: italic;
   font-weight: normal;
   font-size: 25px;
 }

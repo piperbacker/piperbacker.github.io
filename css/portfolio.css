@@ -76,7 +76,6 @@ h2 {
 h3 {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-style: italic;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -97,10 +96,10 @@ h5 {
 
 p {
   font-family: var(--secondary-font);
-  font-style: italic;
   font-weight: 400;
   font-size: 1.12rem;
   line-height: 40px;
+  margin: 0;
 }
 
 a {
@@ -140,14 +139,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 0.3rem var(--blue);
+  border-bottom: solid 0.2rem #ffffff00;
   color: var(--off-white);
   background-color: var(--blue);
   position: sticky;
   top: 0;
   z-index: 1;
-  transition: all 300ms ease-in;
-  background-image: var(--noise);
 }
 
 nav .logo-link {
@@ -177,8 +174,7 @@ nav .nav-bar {
 }
 
 nav:has(.nav-bar a:hover) {
-  border-bottom: solid 0.3rem var(--orange);
-  transition: all 300ms ease-out;
+  border-bottom: solid 0.2rem var(--orange);
 }
 
 .socials-bar {
@@ -281,7 +277,6 @@ nav:has(.nav-bar a:hover) {
 
 #intro-section #intro-2 {
   font-weight: 700;
-  font-style: italic;
   font-size: 2.5rem;
   color: var(--pink);
 }
@@ -292,7 +287,6 @@ nav:has(.nav-bar a:hover) {
 
 #projects-section {
   background-color: var(--pink);
-  background-image: var(--noise);
 }
 
 #projects-section #projects {
@@ -306,7 +300,6 @@ nav:has(.nav-bar a:hover) {
   justify-content: center;
   background-color: var(--blue);
   color: var(--off-white);
-  background-image: var(--noise);
   gap: 3rem;
   padding: 0 1rem;
   cursor: pointer;
