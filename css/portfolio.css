@@ -71,6 +71,7 @@ h2 {
   font-weight: 700;
   font-size: 2.5rem;
   margin: 0;
+  padding-top: 0.8rem;
 }
 
 h3 {
@@ -100,6 +101,7 @@ p {
   font-size: 1.12rem;
   line-height: 40px;
   margin: 0;
+  padding-bottom: 0.8rem;
 }
 
 a {
@@ -171,10 +173,6 @@ nav .nav-bar {
   display: flex;
   gap: 3rem;
   font-size: 1.8rem;
-}
-
-nav:has(.nav-bar a:hover) {
-  border-bottom: solid 0.2rem var(--orange);
 }
 
 .socials-bar {
@@ -308,7 +306,7 @@ nav:has(.nav-bar a:hover) {
 }
 
 #projects-section .project-card:hover {
-  transition: all 400ms ease-out;
+  outline: solid 0.3rem var(--lime-green);
 }
 
 #projects-section .project-card:hover img {
@@ -317,7 +315,8 @@ nav:has(.nav-bar a:hover) {
 }
 
 #projects-section .project-card:hover h3 {
-  color: var(--orange);
+  transition: all 400ms ease-out;
+  text-decoration: underline;
 }
 
 #projects-section img {
