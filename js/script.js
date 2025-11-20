@@ -39,7 +39,8 @@ const linkedin = {
             </svg>`
 }
 
-const socials = [dribbble, github, linkedin];
+// Add dribbble back in here
+const socials = [github, linkedin];
 
 function enlargeImage(src, img, bg, caption, captionText) {
     console.log("caption text", captionText);
@@ -132,6 +133,44 @@ function displayProjectHeader() {
     displayHeader(navBarItems);
 }
 
+function displayMobileHeader() {
+    // let navBarItems = [];
+
+    // const home = document.createElement('a');
+    // projects.href = '#intro';
+    // projects.textContent = 'Home'
+    // navBarItems.push(home);
+
+    // const projects = document.createElement('a');
+    // projects.href = '#projects';
+    // projects.textContent = 'Projects'
+    // navBarItems.push(projects);
+
+    // const illustrations = document.createElement('a');
+    // illustrations.href = '#illustrations';
+    // illustrations.textContent = 'Illustrations'
+    // navBarItems.push(illustrations);
+
+    // const about = document.createElement('a');
+    // about.href = '#about';
+    // about.textContent = 'About'
+    // navBarItems.push(about);
+
+    const mobileNav = document.getElementById('mobile-nav');
+
+    const navBtn = document.createElement('button');
+    navBtn.textContent = '=';
+    mobileNav.appendChild(navBtn);
+
+    const navBar = document.createElement('div');
+    navBar.classList.add('nav-bar');
+    mobileNav.appendChild(navBar);
+
+    // for (let item of navBarItems) {
+    //     navBar.appendChild(item)
+    // }
+}
+
 function displayHeader(navBarItems) {
     const nav = document.getElementById('nav');
     const navBar = document.createElement('div');
@@ -156,7 +195,7 @@ function displayHeader(navBarItems) {
 }
 
 function displayFooter() {
-    const message = `Designed and developed by Piper Backer • 2024`;
+    const message = `Designed and developed by Piper Backer • 2025`;
 
     const footer = document.getElementById('footer');
     const socialsBar = document.createElement('div');

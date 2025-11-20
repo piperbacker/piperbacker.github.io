@@ -25,6 +25,9 @@
     <nav id="nav">
     </nav>
 
+    <nav id="mobile-nav">
+    </nav>
+
     <section id="intro-section">
         <div id="intro"></div>
         <div id="intro-view">
@@ -74,16 +77,30 @@
             Below is a curated selection of projects I have worked on both in a professional capacity, and personally
             to learn new tools and explore creatively.
         </p>
+        <!-- <div class="projects">
+            <div class="project-card toodoo gradient-box" onclick="window.location='projects/toodoo.html'">
+                <img src="/img/projects/toodoo/toodoo_thumbnail.png"></img>
+
+                <div class="text-container">
+                    <h3>Toodoo Chrome Extension</h3>
+                    <p>
+                        Build to-do lists with a colorful interface inspired by the day night cycle built using
+                        Typescript
+                        and React.
+                    </p>
+                </div>
+            </div> -->
         <div class="project-card blog-refresh" onclick="window.location='projects/blog.html'">
             <img src="/img/projects/blog-refresh/blog_light_mockup.png"></img>
 
             <div class="text-container">
-                <h3>Hexaly Blog Refresh</h3>
+                <h3>Blog Refresh</h3>
                 <p>
                     Redesign the company blog landing page to provide an intuitive and adapted user experience,
                     including a new sidebar with a custom article filtering system.
                 </p>
             </div>
+        </div>
         </div>
     </section>
 
@@ -155,6 +172,7 @@
 <script src="/js/script.js"></script>
 <script language="javascript">
     displayHomeHeader();
+    displayMobileHeader();
     displayIllustrations();
     displayFooter();
 </script>
