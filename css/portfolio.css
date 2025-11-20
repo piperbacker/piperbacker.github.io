@@ -593,7 +593,6 @@ footer a svg:hover {
 
   nav#mobile-nav {
     display: block;
-    position: relative;
   }
 
   nav#mobile-nav button {
@@ -608,10 +607,11 @@ footer a svg:hover {
 
   nav#mobile-nav .nav-bar {
     position: absolute;
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    top: 2.8rem;
     right: 0;
-    background: white;
-    z-index: 10;
+    background: var(--blue);
     padding: 1rem;
   }
 

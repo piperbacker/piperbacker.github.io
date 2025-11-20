@@ -134,28 +134,6 @@ function displayProjectHeader() {
 }
 
 function displayMobileHeader() {
-    // let navBarItems = [];
-
-    // const home = document.createElement('a');
-    // projects.href = '#intro';
-    // projects.textContent = 'Home'
-    // navBarItems.push(home);
-
-    // const projects = document.createElement('a');
-    // projects.href = '#projects';
-    // projects.textContent = 'Projects'
-    // navBarItems.push(projects);
-
-    // const illustrations = document.createElement('a');
-    // illustrations.href = '#illustrations';
-    // illustrations.textContent = 'Illustrations'
-    // navBarItems.push(illustrations);
-
-    // const about = document.createElement('a');
-    // about.href = '#about';
-    // about.textContent = 'About'
-    // navBarItems.push(about);
-
     const mobileNav = document.getElementById('mobile-nav');
 
     const navBtn = document.createElement('button');
@@ -164,12 +142,32 @@ function displayMobileHeader() {
 
     const navBar = document.createElement('div');
     navBar.classList.add('nav-bar');
+    navBar.style.display = 'none';
     mobileNav.appendChild(navBar);
 
-    // for (let item of navBarItems) {
-    //     navBar.appendChild(item)
-    // }
+    const links = [
+        { href: '#intro', text: 'Home' },
+        { href: '#projects', text: 'Projects' },
+        { href: '#illustrations', text: 'Illustrations' },
+        { href: '#about', text: 'About' }
+    ];
+
+    for (let item of links) {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.textContent = item.text;
+        navBar.appendChild(a);
+    }
+
+    navBtn.addEventListener('click', () => {
+        if (navBar.style.display === 'none') {
+            navBar.style.display = 'flex';
+        } else {
+            navBar.style.display = 'none';
+        }
+    });
 }
+
 
 function displayHeader(navBarItems) {
     const nav = document.getElementById('nav');
