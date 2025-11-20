@@ -18,5 +18,3 @@ The goal is for my portfolio website to be visually unique and really reflect my
 • HTML  <br>
 • CSS  <br>
 
-## More Info
-To learn more about my thought process and mockup designs when creating this website, check out my post on [dribbble](https://dribbble.com/shots/23807920-Portfolio-Website-Design).
