@@ -1,9 +1,11 @@
 const images = [
     { link: "IMG_0941.jpg", caption: "Koi. Graphite, ink, marker" },
-    { link: "IMG_0952.jpg", caption: "Interstellar rodeo. Marker, ink" },
+    { link: "IMG_6192.jpg", caption: "Shining. Gouache, colored pencil, gold leaf" },
+    // { link: "IMG_0952.jpg", caption: "Interstellar rodeo. Marker, ink" },
     { link: "IMG_0943.jpg", caption: "Train to nowhere. Marker, ink" },
     { link: "IMG_0937.jpg", caption: "Finding the right path. Colored pencil, marker, ink" },
     { link: "IMG_0949.jpg", caption: "The dragon. Gouache, ink" },
+    // { link: "IMG_8385.jpg", caption: "Good things are happening every day. Acrylics, glitter" },
     { link: "IMG_0954.jpg", caption: "14.07. Marker, ink" }
 ];
 
