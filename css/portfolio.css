@@ -13,8 +13,8 @@
 
   --border-radius: 1rem;
 
-  --main-font: "Khula", sans-serif;
-  --secondary-font: "Lato", sans-serif;
+  --main-font: "Khula", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --secondary-font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --khula-height: 0.8em;
   --khula-line-height: 1.1em;
 
@@ -84,14 +84,14 @@ h3 {
 h4 {
   font-family: var(--secondary-font);
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1rem;
   margin: 0;
 }
 
 h5 {
   font-family: var(--secondary-font);
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 
@@ -99,7 +99,7 @@ p {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 1.12rem;
-  line-height: 40px;
+  line-height: 2rem;
   margin: 0;
   padding-bottom: 0.8rem;
 }
@@ -179,6 +179,35 @@ nav .nav-bar {
   font-size: 1.8rem;
 }
 
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: var(--blue);
+  min-width: 8rem;
+  padding: 0.5rem;
+}
+
+.submenu a {
+  padding: 8px 12px;
+  color: var(--white);
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: 100;
+}
+
+.submenu a:hover {
+  color: var(--lime-green);
+}
+
+.has-submenu:hover > .submenu {
+  display: flex;
+}
+
 .socials-bar {
   display: flex;
   gap: 1rem;
@@ -189,6 +218,8 @@ nav .nav-bar {
   font-family: var(--secondary-font);
   background: linear-gradient(to right, var(--blue), transparent),
     var(--gradiant-noise);
+  min-height: 90vh;
+  overflow: hidden;
 }
 
 #intro-section #intro {
@@ -209,6 +240,7 @@ nav .nav-bar {
   display: flex;
   gap: 2.5rem;
   align-items: flex-end;
+  min-height: 10rem;
 }
 
 #intro-img div {
@@ -251,6 +283,28 @@ nav .nav-bar {
   animation-name: scaleStar;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.star {
+  width: 100%;
+  aspect-ratio: 167 / 250;
+}
+
+#star1 {
+  height: 10rem;
+}
+
+#star2 {
+  height: 15rem;
+  margin-bottom: 3rem;
+}
+
+#star1 path {
+  fill: var(--lime-green);
+}
+
+#star2 path {
+  fill: var(--pink);
 }
 
 #intro-section #intro-name {
@@ -299,10 +353,10 @@ nav .nav-bar {
 .project-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   color: var(--off-white);
   gap: 3rem;
-  padding: 0 1rem;
+  padding-left: 3%;
   cursor: pointer;
   border-radius: var(--border-radius);
   background: linear-gradient(270deg, #eb7259, #722267, var(--blue));
@@ -332,13 +386,12 @@ nav .nav-bar {
 }
 
 #projects-section img {
-  width: 40%;
+  width: 30%;
   transition: all 300ms ease-in;
   transform: scale(1);
 }
 
 #projects-section h3 {
-  font-size: 2.5rem;
   font-style: normal;
   color: var(--lime-green);
 }
@@ -544,6 +597,7 @@ footer a svg:hover {
   }
 
   #projects-section .project-card {
+    justify-content: center;
     gap: 1rem;
   }
 

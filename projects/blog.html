@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet">
 
-    <!-- custom style sheet -->
     <link href="/css/portfolio.css" rel="stylesheet">
     <link href="/css/projects.css" rel="stylesheet">
 
@@ -189,8 +186,10 @@
 
 <script src="/js/script.js"></script>
 <script language="javascript">
-    displayProjectHeader();
-    displayFooter();
+    window.addEventListener('DOMContentLoaded', () => {
+        displayProjectHeader();
+        displayFooter();
+    });
 </script>
 
 </html>
