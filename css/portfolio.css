@@ -175,16 +175,18 @@ nav a {
 
 nav .nav-bar {
   display: flex;
+  align-items: center;
   gap: 3rem;
   font-size: 1.8rem;
 }
 
 .nav-item {
-  position: relative;
+  display: inline-flex;
 }
 
 .submenu {
   position: absolute;
+  top: 50px;
   display: none;
   flex-direction: column;
   background-color: var(--blue);
@@ -194,6 +196,7 @@ nav .nav-bar {
 
 .submenu a {
   padding: 8px 12px;
+  padding-left: 0;
   color: var(--white);
   font-size: 1rem;
   font-family: var(--secondary-font);
@@ -655,18 +658,24 @@ footer a svg:hover {
     display: block;
   }
 
-  nav#mobile-nav .nav-bar {
-    display: none;
+  nav#mobile-nav .nav-bar.visible {
+    display: flex;
   }
 
   nav#mobile-nav .nav-bar {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: flex-start;
     top: 2.8rem;
+    gap: 1rem;
     right: 0;
     background: var(--blue);
     padding: 1rem;
+  }
+
+  nav#mobile-nav .nav-bar a {
+    text-align: left;
   }
 
   nav#mobile-nav button:hover + nav#mobile-nav .nav-bar {
