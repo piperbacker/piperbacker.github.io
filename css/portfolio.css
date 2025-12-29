@@ -650,6 +650,7 @@ footer a svg:hover {
 
   nav#mobile-nav {
     display: block;
+    padding: 0;
   }
 
   nav#mobile-nav button {
@@ -667,7 +668,7 @@ footer a svg:hover {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    top: 2.8rem;
+    top: 30px;
     gap: 1rem;
     right: 0;
     background: var(--blue);
